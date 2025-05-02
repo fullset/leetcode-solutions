@@ -11,6 +11,4 @@
 | Medium     | 4      |
 | Hard       | 0      |
 
-## List 
-
-- [Count Covered Buildings](./rust/medium/count_covered_buildings)
+NOTE: Some tasks had been solved using web editor, so there are no solutions here. Full list is allowed in my [profile](https://leetcode.com/u/gesidler/)

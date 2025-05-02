@@ -64,35 +64,49 @@ pub fn add_two_numbers(
     result
 }
 
-fn main() {
-    let l1_1 = ListNode::new(2);
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-    let mut l1_2 = ListNode::new(3);
-    l1_2.next = Some(Box::new(l1_1));
+    #[test]
+    fn it_works() {
+        // `$ cargo test -- add_two_numbers --nocapture`
 
-    let l1_3 = ListNode {
-        val: 4,
-        next: Some(Box::new(l1_2)),
-    };
+        let l1_1 = ListNode::new(2);
 
-    let l2_1 = ListNode::new(9);
+        let mut l1_2 = ListNode::new(3);
+        l1_2.next = Some(Box::new(l1_1));
 
-    let mut l2_2 = ListNode::new(3);
-    l2_2.next = Some(Box::new(l2_1));
+        let l1_3 = ListNode {
+            val: 4,
+            next: Some(Box::new(l1_2)),
+        };
 
-    let l2_3 = ListNode {
-        val: 8,
-        next: Some(Box::new(l2_2)),
-    };
+        let l2_1 = ListNode::new(9);
 
-    // 234 + 938 = 1172
-    add_two_numbers(Some(Box::new(l1_3.clone())), Some(Box::new(l2_3.clone())));
+        let mut l2_2 = ListNode::new(3);
+        l2_2.next = Some(Box::new(l2_1));
 
-    let l2_4 = ListNode {
-        val: 1,
-        next: Some(Box::new(l2_3)),
-    };
+        let l2_3 = ListNode {
+            val: 8,
+            next: Some(Box::new(l2_2)),
+        };
 
-    // 234 + 9381 = 9615
-    add_two_numbers(Some(Box::new(l1_3)), Some(Box::new(l2_4)));
+        // 234 + 938 = 1172
+        println!(
+            "{:?}",
+            add_two_numbers(Some(Box::new(l1_3.clone())), Some(Box::new(l2_3.clone())))
+        );
+
+        let l2_4 = ListNode {
+            val: 1,
+            next: Some(Box::new(l2_3)),
+        };
+
+        // 234 + 9381 = 9615
+        println!(
+            "{:?}",
+            add_two_numbers(Some(Box::new(l1_3)), Some(Box::new(l2_4)))
+        );
+    }
 }

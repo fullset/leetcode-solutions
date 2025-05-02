@@ -18,7 +18,6 @@ pub fn middle_node(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     let mut middle = head;
 
     while end.is_some() {
-        
         end = end.unwrap().next;
 
         if let Some(val) = end {
@@ -30,12 +29,18 @@ pub fn middle_node(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     return middle;
 }
 
-fn main() {
-    let l = Box::new(ListNode::new(123));
-    let list = ListNode {
-        val: 234,
-        next: Some(l),
-    };
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-    println!("{:?}", middle_node(Some(Box::new(list))));
+    #[test]
+    fn it_works() {
+        let l = Box::new(ListNode::new(123));
+        let list = ListNode {
+            val: 234,
+            next: Some(l),
+        };
+
+        println!("{:?}", middle_node(Some(Box::new(list))));
+    }
 }

@@ -1,6 +1,0 @@
-[package]
-name = "count_overed_buildings_3531"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]

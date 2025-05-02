@@ -35,7 +35,13 @@ impl Solution {
     }
 }
 
-fn main() {
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn it_works() {
+    // `$ cargo test -- reverse_linked_list --nocapture`
     let l1_1 = ListNode::new(2);
 
     let mut l1_2 = ListNode::new(3);
@@ -48,4 +54,4 @@ fn main() {
 
     println!("{:?}", l1_3);
     println!("{:?}", Solution::reverse_list(Some(Box::new(l1_3))));
-}
+}}
