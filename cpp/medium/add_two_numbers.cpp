@@ -17,6 +17,17 @@ public:
     static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
 };
 
+void pushValBack(ListNode **head, ListNode **end, int val) {
+    ListNode *l3 = new ListNode(val);
+    if (*head == nullptr) {
+        *head = l3;
+        *end = *head;
+    } else {
+        (*end)->next = l3;
+        *end = (*end)->next;
+    }
+}
+
 ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2)
 {
     int additional = 0;
@@ -32,14 +43,8 @@ ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2)
         } else {
             additional = 0;
         }
-        ListNode *l3 = new ListNode(sum);
-        if (head == nullptr) {
-            head = l3;
-            end = head;
-        } else {
-            end->next = l3;
-            end = end->next;
-        }
+
+        pushValBack(&head, &end, sum);
 
         l1 = l1->next;
         l2 = l2->next;
@@ -53,14 +58,8 @@ ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2)
         } else {
             additional = 0;
         }
-        ListNode *l3 = new ListNode(sum);
-        if (head == nullptr) {
-            head = l3;
-            end = head;
-        } else {
-            end->next = l3;
-            end = end->next;
-        }
+
+        pushValBack(&head, &end, sum);
 
         l1 = l1->next;
     }
@@ -73,27 +72,14 @@ ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2)
         } else {
             additional = 0;
         }
-        ListNode *l3 = new ListNode(sum);
-        if (head == nullptr) {
-            head = l3;
-            end = head;
-        } else {
-            end->next = l3;
-            end = end->next;
-        }
+
+        pushValBack(&head, &end, sum);
 
         l2 = l2->next;
     }
 
     if (additional != 0) {
-        ListNode *l3 = new ListNode(additional);
-        if (head == nullptr) {
-            head = l3;
-            end = head;
-        } else {
-            end->next = l3;
-            end = end->next;
-        }
+        pushValBack(&head, &end, additional);
     }
 
     return head;
