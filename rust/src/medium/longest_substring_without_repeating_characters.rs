@@ -44,7 +44,6 @@ impl Solution {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -52,10 +51,19 @@ mod tests {
     #[test]
     fn it_works() {
         assert_eq!(Solution::length_of_longest_substring("bbb".to_string()), 1);
-        assert_eq!(Solution::length_of_longest_substring("abcabcabc".to_string()), 3);
+        assert_eq!(
+            Solution::length_of_longest_substring("abcabcabc".to_string()),
+            3
+        );
         assert_eq!(Solution::length_of_longest_substring(" ".to_string()), 1);
-        assert_eq!(Solution::length_of_longest_substring("pwwkew".to_string()), 3);
-        assert_eq!(Solution::length_of_longest_substring("sgjqlktjdidigifjhldkdnfjs".to_string()), 8);
+        assert_eq!(
+            Solution::length_of_longest_substring("pwwkew".to_string()),
+            3
+        );
+        assert_eq!(
+            Solution::length_of_longest_substring("sgjqlktjdidigifjhldkdnfjs".to_string()),
+            8
+        );
         assert_eq!(Solution::length_of_longest_substring("aab".to_string()), 2);
     }
 }

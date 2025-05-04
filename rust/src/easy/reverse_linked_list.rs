@@ -41,17 +41,18 @@ mod tests {
 
     #[test]
     fn it_works() {
-    // `$ cargo test -- reverse_linked_list --nocapture`
-    let l1_1 = ListNode::new(2);
+        // `$ cargo test -- reverse_linked_list --nocapture`
+        let l1_1 = ListNode::new(2);
 
-    let mut l1_2 = ListNode::new(3);
-    l1_2.next = Some(Box::new(l1_1));
+        let mut l1_2 = ListNode::new(3);
+        l1_2.next = Some(Box::new(l1_1));
 
-    let l1_3 = ListNode {
-        val: 4,
-        next: Some(Box::new(l1_2)),
-    };
+        let l1_3 = ListNode {
+            val: 4,
+            next: Some(Box::new(l1_2)),
+        };
 
-    println!("{:?}", l1_3);
-    println!("{:?}", Solution::reverse_list(Some(Box::new(l1_3))));
-}}
+        println!("{:?}", l1_3);
+        println!("{:?}", Solution::reverse_list(Some(Box::new(l1_3))));
+    }
+}
