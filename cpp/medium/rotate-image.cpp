@@ -12,7 +12,6 @@ public:
         int last = n - 1;
         for (int i = 0; i < n / 2; i++){
             for (int j = i; j < n - i - 1; j++) {
-                // i = 0; j = 1; n = 3; last = 2
                 std::swap(matrix[i][j], matrix[j][last-i]);
                 std::swap(matrix[last-j][i], matrix[i][j]);
                 std::swap(matrix[last-i][last-j], matrix[last-j][i]);
