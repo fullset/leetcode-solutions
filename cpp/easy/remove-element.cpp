@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/remove-element/
+// https://leetcode.com/problems/remove-element/
 
 #include <algorithm>
 #include <cassert>

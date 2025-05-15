@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-common-prefix/
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
 #include <algorithm>
 #include <cassert>
