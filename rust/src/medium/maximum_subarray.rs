@@ -87,11 +87,14 @@ mod tests {
         );
         assert_eq!(Solution::max_sub_array(vec![5, 4, -1, 7, 8]), 23);
         assert_eq!(Solution::max_sub_array(vec![3, 2, -3, -1, 1, -3, 1, -1]), 5);
-        assert_eq!(Solution::max_sub_array(vec![-2,3,-3,1,1,-1,1,1,1]), 4);
+        assert_eq!(
+            Solution::max_sub_array(vec![-2, 3, -3, 1, 1, -1, 1, 1, 1]),
+            4
+        );
 
-        assert_eq!(Solution::max_sub_array(vec![-9,-2,1,8,7,-6,4,9,-9,-5,0,5,-2,5,9,7]),33);
-
-        
-
+        assert_eq!(
+            Solution::max_sub_array(vec![-9, -2, 1, 8, 7, -6, 4, 9, -9, -5, 0, 5, -2, 5, 9, 7]),
+            33
+        );
     }
 }

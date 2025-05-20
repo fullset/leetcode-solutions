@@ -1,4 +1,6 @@
 mod add_two_numbers;
 mod count_covered_buildings;
+mod daily_temperatures;
 mod longest_substring_without_repeating_characters;
 mod maximum_subarray;
+mod product_of_array_except_self;

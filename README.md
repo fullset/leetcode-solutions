@@ -7,7 +7,7 @@
 
 | Difficulty | Solved |
 |------------|--------|
-| Easy       | 20+    |
+| Easy       | 30+    |
 | Medium     | 10+    |
 | Hard       | 1      |
 
