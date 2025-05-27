@@ -1,6 +1,6 @@
 # LeetCode Solutions
 
-- 40+ problems
+- 50+ problems
 - C++, Rust, Python3  
 
 ## Progress
